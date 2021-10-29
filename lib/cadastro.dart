@@ -52,7 +52,7 @@ class CadastroScreen extends StatelessWidget {
               },
           ),
           TextButton(
-              child: Text("Entra na conta"),
+              child: Text("Entra em uma conta"),
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(horizontal: 60, vertical: 38),
                 textStyle: TextStyle(fontSize: 17),
