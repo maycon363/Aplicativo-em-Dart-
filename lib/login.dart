@@ -7,7 +7,7 @@ class LoginScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset("assets/policia-Image.jpeg", height: 180, width: 220),
+          Image.asset("policia-df.png", height: 190, width: 220),
           Text(
             "Contato Policial",
             textAlign: TextAlign.center,
@@ -26,24 +26,31 @@ class LoginScreen extends StatelessWidget {
             child: TextField(
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                  labelText: "Senha", border: OutlineInputBorder()),
+                  labelText: "Senha",
+                  border: OutlineInputBorder()),
+                  obscureText: true,
             ),
           ),
-          ElevatedButton(
-            child: Text('ENTRAR'),
+          ElevatedButton.icon(
+            icon: Icon(Icons.home, size: 18),
+            label: Text('ENTRAR'),
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.symmetric(horizontal: 18, vertical: 20),
               textStyle: TextStyle(fontSize: 14),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/lista');
+            },
           ),
           TextButton(
-              child: Text("Cadastrar-se aqui!!"),
+              child: Text("Cadastrar-se aqui!!!"),
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(horizontal: 60, vertical: 38),
                 textStyle: TextStyle(fontSize: 17),
               ),
-              onPressed: (){}),
+              onPressed: () {
+                Navigator.pushNamed(context, '/cadastro');
+              }),
         ],
       ),
     );

@@ -11,16 +11,18 @@ class ListaScreen extends StatelessWidget {
           itemCount: 10,
           itemBuilder: (ctxt, index) {
             return ListTile(
-              leading: Icon(Icons.person),
-              title: Text("nome ${index}"),
-              subtitle: Text("66-9999-9999"),
+              leading: Icon(Icons.person_pin),
+              title: Text("Juninho ${index}"),
+              subtitle: Text("61-8698-9475"),
               trailing: Icon(Icons.delete),
             );
           },
             ),
         floatingActionButton: FloatingActionButton(
-      child: Icon(Icons.add),
-      onPressed: (){},
+      child: Icon(Icons.phone),
+            onPressed: () {
+              Navigator.pushNamed(context, '/adicionar');
+            },
     ),);
   }
 }

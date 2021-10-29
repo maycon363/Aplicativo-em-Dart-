@@ -17,8 +17,13 @@ class MeuApp extends StatelessWidget {
       // Widget_Layout
       title: 'Widgets Flutter',
       theme: ThemeData(
-        primarySwatch: Colors.red),
-      home: AdicionarScreen()
+        primarySwatch: Colors.blue),
+      routes: {
+        '/': (context) => LoginScreen(),
+        '/cadastro': (context) => CadastroScreen(),
+        '/lista': (context) => ListaScreen(),
+        '/adicionar': (context) => AdicionarScreen(),
+      }
     );
   }
 }

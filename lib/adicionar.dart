@@ -12,8 +12,9 @@ class _AdicionarScreenState extends State<AdicionarScreen> {
   String  _nome = '';
   String  _telefone = '';
 
-  void pressionaEntrar() {
+  void pressionaEntrar(BuildContext context) {
     print("${_nome} : ${_telefone} ");
+    Navigator.pop(context);
   }
 
   void MantemPressionado() {
@@ -29,6 +30,7 @@ class _AdicionarScreenState extends State<AdicionarScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Image.asset("Adiciona.jpg", height: 180, width: 300),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 16, horizontal: 10),
             child: TextField(
@@ -50,7 +52,7 @@ class _AdicionarScreenState extends State<AdicionarScreen> {
           ),
           TextButton(
             child: Text(_texto),
-            onPressed: pressionaEntrar,
+            onPressed: () { pressionaEntrar(context); },
               onLongPress: MantemPressionado,
           ),
         ],

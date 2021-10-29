@@ -8,7 +8,7 @@ class CadastroScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset("assets/policia-Image.jpeg", height: 180, width: 220),
+          Image.asset("policia-df.png", height: 190, width: 220),
           Text(
             "Contato Policial",
             textAlign: TextAlign.center,
@@ -35,24 +35,31 @@ class CadastroScreen extends StatelessWidget {
             child: TextField(
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                  labelText: "Senha", border: OutlineInputBorder()),
+                  labelText: "Senha",
+                  border: OutlineInputBorder()),
+              obscureText: true,
             ),
           ),
-          ElevatedButton(
-            child: Text('ENTRAR'),
+          ElevatedButton.icon(
+            icon: Icon(Icons.home, size: 18),
+            label: Text('CADASTRAR'),
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               textStyle: TextStyle(fontSize: 14),
             ),
-            onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/lista');
+              },
           ),
           TextButton(
-              child: Text("Cadastrar-se aqui!!"),
+              child: Text("Entra na conta"),
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(horizontal: 60, vertical: 38),
                 textStyle: TextStyle(fontSize: 17),
               ),
-              onPressed: (){}),
+              onPressed: () {
+                Navigator.pushNamed(context, '/');
+              }),
         ],
       ),
     );
