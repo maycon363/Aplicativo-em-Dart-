@@ -38,7 +38,7 @@ class _AdicionarScreenState extends State<AdicionarScreen> {
               keyboardType: TextInputType.name,
               onChanged: (text) => setState(() => _nome = text),
               decoration: InputDecoration(
-                  labelText: "Nome", border: OutlineInputBorder()),
+                  labelText: "Nome Completo", border: OutlineInputBorder()),
             ),
           ),
           Padding(
