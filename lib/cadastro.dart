@@ -41,11 +41,11 @@ class CadastroScreen extends StatelessWidget {
             ),
           ),
           ElevatedButton.icon(
-            icon: Icon(Icons.home, size: 18),
+            icon: Icon(Icons.home, size: 19),
             label: Text('CADASTRAR'),
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-              textStyle: TextStyle(fontSize: 14),
+              textStyle: TextStyle(fontSize: 15),
             ),
               onPressed: () {
                 Navigator.pushNamed(context, '/lista');

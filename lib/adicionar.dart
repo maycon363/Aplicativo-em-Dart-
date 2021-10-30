@@ -14,7 +14,7 @@ class _AdicionarScreenState extends State<AdicionarScreen> {
 
   void pressionaEntrar(BuildContext context) {
     print("${_nome} : ${_telefone} ");
-    Navigator.pop(context);
+    Navigator.pushNamed(context, '/lista');
   }
 
   void MantemPressionado() {
