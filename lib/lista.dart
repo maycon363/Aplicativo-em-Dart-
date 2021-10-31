@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:pratica3/login.dart';
 
 class ListaScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          actions: [GestureDetector(
+            child: Icon(Icons.add_to_home_screen_rounded),
+            onTap: () {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
+                return LoginScreen();
+              }));
+            },
+          )],
           title: Text("Contatos"),
         ),
         body: ListView.builder(

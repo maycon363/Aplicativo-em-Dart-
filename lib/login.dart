@@ -39,7 +39,7 @@ class LoginScreen extends StatelessWidget {
               textStyle: TextStyle(fontSize: 14),
             ),
             onPressed: () {
-              Navigator.pushNamed(context, '/lista');
+              Navigator.pushReplacementNamed(context, '/lista');
             },
           ),
           TextButton(
@@ -49,7 +49,7 @@ class LoginScreen extends StatelessWidget {
                 textStyle: TextStyle(fontSize: 17),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, '/cadastro');
+                Navigator.pushReplacementNamed(context, '/cadastro');
               }),
         ],
       ),

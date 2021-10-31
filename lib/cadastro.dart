@@ -48,7 +48,7 @@ class CadastroScreen extends StatelessWidget {
               textStyle: TextStyle(fontSize: 15),
             ),
               onPressed: () {
-                Navigator.pushNamed(context, '/lista');
+                Navigator.pushReplacementNamed(context, '/lista');
               },
           ),
           TextButton(
@@ -58,7 +58,7 @@ class CadastroScreen extends StatelessWidget {
                 textStyle: TextStyle(fontSize: 17),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, '/');
+                Navigator.pushReplacementNamed(context, '/');
               }),
         ],
       ),
